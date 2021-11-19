@@ -1,0 +1,102 @@
+{
+  "store.product": {
+    "children": [
+      "flex-layout.row#product-main",
+      "flex-layout.row#description",
+      "flex-layout.row#Assembly"
+    ]
+  },
+  "flex-layout.row#product-main": {
+    "children": [
+      "flex-layout.col#productImg",
+      "flex-layout.col#productDescription"
+    ],
+    "props": {
+      "fullWidth": true,
+      "marginTop": 7
+    }
+  },
+  "flex-layout.col#productImg": {
+    "children": [
+      "product-images"
+    ]
+  },
+  "product-images": {
+    "props": {
+      "aspectRatio": {
+        "desktop": "auto",
+        "phone": "16:9"
+      },
+      "displayThumbnailsArrows": true
+    }
+  },
+  "flex-layout.col#productDescription": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 0,
+      "marginRight": 7
+    },
+    "children": [
+      "flex-layout.row#product-name",
+      "product-price",
+      "product-separator",
+      "product-assembly-options",
+      "flex-layout.row#buy-button"
+    ]
+  },
+  "product-price": {
+    "props": {
+      "showSavings": true,
+      "showListPrice": true
+    }
+  },
+  "flex-layout.row#product-name": {
+    "children": [
+      "product-name"
+    ],
+    "props": {
+      "marginBottom": 5
+    }
+  },
+  "flex-layout.row#description": {
+    "props": {
+      "marginTop": 5,
+      "marginBottom": 7
+    },
+    "children": [
+      "flex-layout.col#description"
+    ]
+  },
+  "flex-layout.col#description": {
+    "children": [
+      "product-description"
+    ],
+    "props": {
+      "marginRight": 7,
+      "marginLeft": 7
+    }
+  },
+  "flex-layout.row#Assembly": {
+    "children": [
+      "flex-layout.col#Assembly"
+    ]
+  },
+  "flex-layout.col#Assembly": {
+    "children": [
+      "info-card#Assembly"
+    ]
+  },
+  "info-card#Assembly": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://i.imgur.com/pFlnQrG.jpeg",
+      "headline": "Conoce Assembly Options",
+      "callToActionText": "Documentación",
+      "callToActionUrl": "https://help.vtex.com/es/tutorial/assembly-options-es--5x5FhNr4f5RUGDEGWzV1nH#implementing-assembly-options",
+      "blockClass": "info-card-example",
+      "textAlignment": "center"
+    }
+  }
+}
